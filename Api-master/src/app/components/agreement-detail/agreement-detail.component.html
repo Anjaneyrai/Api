@@ -1,0 +1,24 @@
+<h1 align="center">Agreement Details</h1>
+
+<table class="responstable">
+  
+  <tr>
+    <th>Agreement Id</th>
+    <th>Product Id</th>
+    <th data-th="Driver details"><span>Team_id</span></th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Action</th>
+    <th>Action</th>
+  </tr>
+  
+  <tr *ngFor="let agree of agreement">
+    <td>{{agree.id}}</td>
+    <td>{{agree.product}}</td>
+    <td>{{agree.team}}</td>
+    <td>{{agree.price}}</td>
+    <td>{{agree.status}}</td>
+    <td><button (click)="onInitiate()" routerLink="/Products/{{agree.product}}/accept">Accept</button></td>
+    <td> <button>Reject</button></td>
+  </tr>
+</table>
