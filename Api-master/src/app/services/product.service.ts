@@ -11,11 +11,7 @@ export class ProductService {
   private baseUrl="http://localhost:7070/postgressApp/productList";
   private baseU="http://localhost:7070/postgressApp/productList/2/getAll";
   constructor(private httpclient :HttpClient) { }
-  getProducts(theProductId:number):Observable<Product[]>{
-      const searchUrl=`${this.baseUrl}/${theProductId}`;
-     if(theProductId==-1)                            
-    return this.httpclient.get<Product[]>(this.baseUrl);
-    else
+  getProducts(theProductId:number):Observable<Product[]>{ 
     return this.httpclient.get<Product[]>(this.baseUrl);
   }
   getDetail(Id:number):Observable<Agreementdetail[]>{
@@ -24,7 +20,7 @@ export class ProductService {
   }
   getMessage(Id:number,email:string,price:number,password:string):Observable<Message[]>
   {
-    const url=`${this.baseUrl}/initiate?id=${Id}&email=${email}&price=${price}&password=${password}`;
+    const url=`${this.baseUrl}/${Id}/initiate?email=${email}&price=${price}&password=${password}`;
     return this.httpclient.get<Message[]>(url);
   }
 }

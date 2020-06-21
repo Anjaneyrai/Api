@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MessageComponent implements OnInit {
 messages:Message[];
 currentProductId:number;
+Id:number;
 email:string;
 password:string;
 price:number;
@@ -20,22 +21,23 @@ constructor(private _messageService:ProductService,
 
   ngOnInit(): void {
     this._activatedroute.paramMap.subscribe(()=>{
-      
-      
+      this.Id=+this._activatedroute.snapshot.paramMap.get('id');
+    })
+    this._activatedroute.paramMap.subscribe(()=>{
     this._activatedroute.queryParams.subscribe(params=>{
-    this.currentProductId=params['idd'];
     this.email=params['email'];
     this.price=params['price'];
     this.password=params['password'];
     
     })
-    this._messageService.getMessage(this.currentProductId,this.email,
+    this._messageService.getMessage(this.Id,this.email,
       this.price,this.password).subscribe(
         data => {this.messages=data;}
       )
-      console.log(this.currentProductId);
+      
       }
     )
+    console.log(this.Id);
 }
 }
 

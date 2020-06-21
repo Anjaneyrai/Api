@@ -33,7 +33,7 @@ export class ProductListComponent implements OnInit {
   }else
   {
     this.currentProductId=-1;
-  }
+  } 
     this._productService.getProducts(this.currentProductId).subscribe(
       data => {this.products=data;}
     )
