@@ -5,6 +5,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { AgreementDetailComponent } from './components/agreement-detail/agreement-detail.component';
 import { MessageComponent } from './components/message/message.component';
 import { ProductComponent } from './components/product/product.component';
+import { AcceptcompComponent } from './components/acceptcomp/acceptcomp.component';
 
 
 const routes: Routes = [
@@ -13,8 +14,8 @@ const routes: Routes = [
   {path: 'Products/:id/getAll',component:AgreementDetailComponent},
   {path: 'Products/:id/initiate',component:MessageComponent},
   {path: 'Products/:id/initiate;email=:email;price=:price;password=:password;',component :MessageComponent},
-  {path:'accept',component:MessageComponent},
-  {path: 'accept/:id;agreement=:agreement;email=:email;password=:password',component:MessageComponent},
+  {path:'Products/:id/accept/:agreementId',component:AcceptcompComponent},
+  {path: 'Products/:id/accept/:agreementId;email=:email;password=:password',component:AcceptcompComponent},
   { path : '' ,redirectTo:'/Products',pathMatch: 'full'},
   {path : '**', component: PageNotFoundComponent}
 ];

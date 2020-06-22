@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MessageComponent } from './components/message/message.component';
 import { AcceptComponent } from './components/accept/accept.component';
 import { ProductComponent } from './components/product/product.component';
+import { AcceptcompComponent } from './components/acceptcomp/acceptcomp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { ProductComponent } from './components/product/product.component';
     LoginComponent,
     MessageComponent,
     AcceptComponent,
-    ProductComponent
+    ProductComponent,
+    AcceptcompComponent
   ],
   imports: [
     BrowserModule,

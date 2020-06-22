@@ -30,7 +30,7 @@ export class AgreementDetailComponent implements OnInit {
     data => {this.agreement=data;}
   )
     })
-    
+    console.log(this.agreement);
   }
   onInitiate(){
     const dialogconfig=new MatDialogConfig();
