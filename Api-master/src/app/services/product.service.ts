@@ -32,4 +32,9 @@ export class ProductService {
     const url=`${this.baseUrl}/${Id}/accept?agreement=${agreementId}&email=${email}&password=${password}`;
     return this.httpclient.get<Message[]>(url);
   }
+  getReject(Id:number,email:string,password:string,agreementId:number):Observable<Message[]>
+  {
+    const url=`${this.baseUrl}/${Id}/reject?agreement=${agreementId}&email=${email}&password=${password}`;
+    return this.httpclient.get<Message[]>(url);
+  }
 }

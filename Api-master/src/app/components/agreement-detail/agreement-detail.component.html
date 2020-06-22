@@ -19,6 +19,6 @@
     <td>{{agree.price}}</td>
     <td>{{agree.status}}</td>
     <td><button (click)="onInitiate()" routerLink="../accept/{{agree.id}}" >Accept</button></td>
-    <td> <button>Reject</button></td>
+    <td> <button (click)="onInitiate()" routerLink="../reject/{{agree.id}}"> Reject</button></td>
   </tr>
 </table>

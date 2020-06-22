@@ -6,6 +6,7 @@ import { AgreementDetailComponent } from './components/agreement-detail/agreemen
 import { MessageComponent } from './components/message/message.component';
 import { ProductComponent } from './components/product/product.component';
 import { AcceptcompComponent } from './components/acceptcomp/acceptcomp.component';
+import { RejectcompComponent } from './components/rejectcomp/rejectcomp.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
   {path: 'Products/:id/initiate;email=:email;price=:price;password=:password;',component :MessageComponent},
   {path:'Products/:id/accept/:agreementId',component:AcceptcompComponent},
   {path: 'Products/:id/accept/:agreementId;email=:email;password=:password',component:AcceptcompComponent},
+  {path:'Products/:id/reject/:agreementId',component:RejectcompComponent},
+  {path: 'Products/:id/reject/:agreementId;email=:email;password=:password',component:RejectcompComponent},
   { path : '' ,redirectTo:'/Products',pathMatch: 'full'},
   {path : '**', component: PageNotFoundComponent}
 ];

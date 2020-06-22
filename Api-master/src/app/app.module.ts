@@ -14,6 +14,7 @@ import { MessageComponent } from './components/message/message.component';
 import { AcceptComponent } from './components/accept/accept.component';
 import { ProductComponent } from './components/product/product.component';
 import { AcceptcompComponent } from './components/acceptcomp/acceptcomp.component';
+import { RejectcompComponent } from './components/rejectcomp/rejectcomp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { AcceptcompComponent } from './components/acceptcomp/acceptcomp.componen
     MessageComponent,
     AcceptComponent,
     ProductComponent,
-    AcceptcompComponent
+    AcceptcompComponent,
+    RejectcompComponent
   ],
   imports: [
     BrowserModule,
