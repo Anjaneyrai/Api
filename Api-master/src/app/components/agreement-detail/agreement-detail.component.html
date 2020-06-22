@@ -1,10 +1,10 @@
+<div *ngIf="agreement.length>0">
 <h1 align="center">Agreement Details</h1>
 
 <table class="responstable">
   
   <tr>
-    <th>Agreement Id</th>
-    <th>Product Id</th>
+    <th>Product No</th>
     <th data-th="Driver details"><span>Team_id</span></th>
     <th>Price</th>
     <th>Status</th>
@@ -13,12 +13,20 @@
   </tr>
   
   <tr *ngFor="let agree of agreement">
-    <td>{{agree.id}}</td>
     <td>{{agree.product}}</td>
     <td>{{agree.team}}</td>
-    <td>{{agree.price}}</td>
+    <td>{{agree.price|  currency:"&#8377;"}}</td>
     <td>{{agree.status}}</td>
     <td><button (click)="onInitiate()" routerLink="../accept/{{agree.id}}" >Accept</button></td>
     <td> <button (click)="onInitiate()" routerLink="../reject/{{agree.id}}"> Reject</button></td>
   </tr>
 </table>
+</div>
+<div *ngIf="agreement.length===0">
+  <div class="d-flex justify-content-center align-items-center" id="main">
+    <h1 class="mr-3 pr-3 align-top border-right inline-block align-content-center">No active agreements on this Product .</h1>
+    <div class="inline-block align-middle">
+    	<h2 class="font-weight-normal lead" id="desc"><button routerLink="/Products">Back To List</button></h2>
+    </div>
+</div>
+</div>
