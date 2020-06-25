@@ -7,7 +7,6 @@
     <th>Product No</th>
     <th data-th="Driver details"><span>Team_id</span></th>
     <th>Price</th>
-    <th>Status</th>
     <th>Action</th>
     <th>Action</th>
   </tr>
@@ -16,7 +15,6 @@
     <td>{{agree.product}}</td>
     <td>{{agree.team}}</td>
     <td>{{agree.price|  currency:"&#8377;"}}</td>
-    <td>{{agree.status}}</td>
     <td><button (click)="onInitiate()" routerLink="../accept/{{agree.id}}" >Accept</button></td>
     <td> <button (click)="onInitiate()" routerLink="../reject/{{agree.id}}"> Reject</button></td>
   </tr>
